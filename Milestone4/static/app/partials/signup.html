@@ -1,5 +1,5 @@
 <!-- The way I style, I put everything into one big div called main, and then code from there -->
-<div class="main">
+<div class="main" ng-controller="SignupController as signupController">
     <!-- The divs left and right handle the banners on the sides of the page that contain the quinnipiac logo -->
     <div class="left">
         <img src="images/quinnipiaclogo.png" id="image">
@@ -16,14 +16,14 @@
         </div>
         <!-- The signup div contains the form that will be used by students or professors to create an account for the website -->
         <div class="signup">
-            <div>
+            <div ng-class="{ 'has-error' : commentForm.name.$error.required && !commentForm.name.$pristine }">
                 <form name="signupForm" novalidate>
                     <div class="form-group">
 
                         <input class="form-control" type="email" name="email" placeholder="Email Address" id="email" ng-model="newSignup.email" required
                             style="float:right;width:100%;">
 
-                        <span ng-show="signupForm.name.$invalid && !signupForm.name.$pristine" class="help-block" style="float:left; margin-left: 145px;">Please enter an email</span>
+                        <span ng-show="signupForm.email.$invalid && !signupForm.email.$pristine" class="help-block" style="float:left; margin-left: 145px;">Please enter an email</span>
                         <span ng-show="signupForm.email.$error.email" class="help-block" style="float:left; margin-left: 145px;">Invalid email address.</span>
 
                     </div>
@@ -85,8 +85,7 @@
                     <br>
                     <div class="form-group" style="padding-top: 7px;">
 
-                        <input type="submit" name="submit" value="Submit" style="float:right;" ng-disabled="signupForm.email.$invalid || signupForm.password.$invalid 
-                        || signupForm.passwordConfirmation.$invalid || signupForm.firstName.$invalid || signupForm.lastName.$invalid || signupForm.userType.$invalid">
+                        <input type="submit" name="submit" value="Submit" style="float:right;" ng-disabled="signupForm.$invalid">
 
                     </div>
                 </form>

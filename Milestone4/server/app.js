@@ -132,7 +132,7 @@ app.post('/api/login', function (request, response) {
     var userName = request.body.userName;
     var password = request.body.password;
 
-    if (userName === "Janine@qu.edu" && password === "pass123") {
+    if (userName === "janinejay" && password === "pass123") {
         var expires = new Date();
         expires.setDate((new Date()).getDate() + 5);
         var token = jwt.encode({
