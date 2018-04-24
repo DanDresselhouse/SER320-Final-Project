@@ -1,0 +1,143 @@
+<!-- The way I style, I put everything into one big div called main, and then code from there -->
+<div class="main">
+    <!-- The divs left and right are the formatting used on the sides that contain the quinnipiac logos -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- Container contains the middle portion of the page -->
+    <div class="container">
+        <!-- Navbar 1 deals with the navbar elements at the top of the page. Each one contains onclick methods to show and hide elements -->
+        <div class="navbar1">
+            <!-- I utilized an unordered list here to display the elements of the navbar -->
+            <ul id="list">
+                <li id="one">
+                    <a href="#student/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#student/createReviews">Submit Evaluation</a>
+                </li>
+                <li id="three">
+                    <a href="#student/reviews">Review Evaluations</a>
+                </li>
+                <li id="four">
+                    <a href="#student/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Roster handles showing the people who are currently taking the class -->
+        <div class="roster" id="roster">
+            <h1>Class Roster</h1>
+            <div class="classname">
+                <h2>Class List:</h2>
+                <!-- These buttons handle showing the class rosters for the separate classes -->
+                <button class="button" style="font-size: 2.25em;" onclick="showClass1()">
+                    SER340
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showClass2()">
+                    SER305
+                </button>
+            </div>
+            <!-- These are the rosters themselves. By default roster1 is visible while roster2's display is none -->
+            <h2>Student Roster</h2>
+            <div id="roster1">
+                <ul style="list-style: none; float: right; margin-right: 17%;">
+                    <li>Matthew Rosen</li>
+                    <li>Ian Jacobs</li>
+                    <li>Carly Emile</li>
+                    <li>Charles Zhu</li>
+                    <li>Mateu Feliu</li>
+                    <li>Daniel Dresselhouse</li>
+                    <li>Anthony Cuomo</li>
+                </ul>
+            </div>
+            <div id="roster2">
+                <ul style="list-style: none; float: right; margin-right: 17%;">
+                    <li>Carly Emile</li>
+                    <li>Daniel Dresselhouse</li>
+                    <li>Matthew Rosen</li>
+                    <li>Mateu Feliu</li>
+                    <li>Anthony Cuomo</li>
+                    <li>Alexander Levin</li>
+                    <li>Matthew Jagiela</li>
+                    <li>Charles Zhu</li>
+                </ul>
+            </div>
+        </div>
+        <!-- This div contains class descriptions, project lists, and a submit course code area for students -->
+        <div class="information" id="information">
+            <h1>Class Information</h1>
+            <br>
+            <h1 style="float: left; padding-left: 7px;">Welcome:</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container-fluid" style="width :50%;">
+                <div class="col-md-3">
+                    <!-- As with prior sections, clicking on the text displays information that is linked to that specific text -->
+                    <!-- This also shows the class descriptions underneath the class list -->
+                    <h2>Classes:</h2>
+                    <ul style="list-style : none;">
+                        <li style="padding-right: 45px;" onclick="showList1()">SER340</li>
+                        <li style="padding-right: 45px;" onclick="showList2()">SER305</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2>Projects:</h2>
+                    <!-- Clicking on a project displays the information and the due date for the project -->
+                    <ul id="list1" style="list-style: none; display: none;">
+                        <li style="padding-right: 45px;" onclick="showProject1()">Create a Website</li>
+                        <li style="padding-right: 30px;" onclick="showProject2()">Revise your SRS document</li>
+                        <li style="padding-right: 45px;" onclick="showProject3()">Hello World</li>
+                    </ul>
+                    <ul id="list2" style="list-style: none; display: none;">
+                        <li style="padding-right: 45px;" onclick="showProject4()">Assignment 11</li>
+                        <li style="padding-right: 45px;" onclick="showProject5()">DealSea Project</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <!-- Students can enter course codes here to join classes -->
+                    <h3>Enter Course Code</h3>
+                    <form>
+                        <input type="text" name="courseInput" style="width: 100%;">
+                    </form>
+                </div>
+                <!-- All of this information is initially hidden upon loading the page. Once one of the text areas is clicked the text here will show up -->
+                <!-- according to which text is clicked -->
+                <div class="col-md-3">
+                    <p id="SER340Description" style="display: none;">SER340 is the software requirements analysis class. This class covers proper elicitation of requirements
+                        from clients and how to appropriately manage the requirements. This class also covers basic HTML,
+                        CSS, and Javascript.</p>
+                    <p id="SER305Description" style="display: none;">SER305 is the advanced computational problem solving class. This class teaches students how to solve
+                        problems creatively while also constraining the problems to specific space and time requirements.
+                        This class covers topics such as bitwise, dynamic programming, programming with tree structures,
+                        etc.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p id="websiteProject" style="display: none;">Students must create a website that satisfies an interviewed client's requirements.
+                        <br>
+                        <br>Due 12/13/17</p>
+                    <p id="srsRevision" style="display: none;">Students must revise and resubmit the SRS document so that it pertains to the current website.
+                        <br>
+                        <br>Due 12/13/17</p>
+                    <p id="helloWorld" style="display: none;">Self Explanatory
+                        <br>
+                        <br>Due 12/13/17</p>
+                    <p id="assignment11" style="display: none;">Students are to complete assignment 11 by Friday. Directions are posted on mimir.
+                        <br>
+                        <br>Due: 12/20/17</p>
+                    <p id="dealsea" style="display: none;">Students must create and present a program that is able to go to a website and return deal information
+                        pertaining to a deal that a user specifies. The program must also run on a user specified time interval.
+                        <br>
+                        <br>Due: 12/30/17</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

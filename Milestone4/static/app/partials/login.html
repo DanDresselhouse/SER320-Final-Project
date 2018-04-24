@@ -1,0 +1,45 @@
+<!-- The way I style, I put everything into one big div called main, and then code from there -->
+<div class="main">
+    <!-- The divs left and right handle the banners on the sides of the page that contain the quinnipiac logo -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- The container div contains all the information located in the center of the page -->
+    <div class="container">
+        <!-- The header div contains the image of the bobcat and the text just below it -->
+        <div class="header">
+            <img src="images/Bobcat.jpg" alt="Quinnipiac Logo">
+            <h2>Log-in to your account</h2>
+        </div>
+        <!-- The login div contains the form where students and professors will be able to input credentials to log in -->
+        <div class="login">
+            <p>
+                Select if you are a professor or a student
+            </p>
+
+            <!-- These will turn into ng-value -->
+
+            <form>
+                <input type="radio" name="selection" checked="checked" id="professor">Professor
+                <input type="radio" name="selection" id="student">Student
+            </form>
+            <form>
+                <input type="text" name="username" ng-model="username" placeholder="E-mail address">
+                <br>
+                <input type="password" name="password" ng-model="password" placeholder="Password">
+                <br>
+                <!-- Depending on which radio button is checked off, professor or student, the login button will bring you to a different page based on what is checked off -->
+                <button ng-click="login()">Login</button>
+            </form>
+        </div>
+        <!-- Links to the signup page -->
+        <div class="signupLink">
+            <p>New to us?
+                <a ng-click="signup()">Sign up now!</a>
+            </p>
+        </div>
+    </div>
+</div>

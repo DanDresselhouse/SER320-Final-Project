@@ -1,0 +1,257 @@
+* {
+	box-sizing: border-box;
+}
+/*Setting the margin to 0px on the body brings everything to the very edge of the page so no white background space is shown*/
+body {
+	margin: 0px;
+}
+/*
+The left and right div stylings
+These divs have a url image and height of 100vh to set them to 100% of the height of the viewport
+*/
+.left {
+	background-image: url(https://www.qu.edu/content/dam/qu/wallpapers/plaid/Android_Plaid.jpg);
+	float: left;
+	width: 25%;
+	height: 100vh;
+}
+.right {
+	background-image: url(https://www.qu.edu/content/dam/qu/wallpapers/plaid/Android_Plaid.jpg);
+	float: right;
+	width: 25%;
+	height: 100vh;
+}
+/*
+	The image and image 2 elements are the quinnipiac logos located on the sides of each page
+	Setting relative positioning and floating allows them to sit on top of the left and right divs, which are also floated
+*/
+#image {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	float: left;
+	margin-left: 25%;
+	margin-top: 60%;
+}
+#image2 {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	float: right;
+	margin-right: 25%;
+	margin-top: 60%;
+}
+/*
+	The container div has a 50% width to fill the rest of the page, while also having a height of 100% of the viewport
+	Setting the margin-left to 25% centers it on the page
+*/
+.container {
+	width: 50%;
+	height: 100vh;
+	background-color: white;
+	margin-left: 25%;
+	text-align: center;
+}
+/*
+	The header fills the width of the container div and center aligns everything inside
+*/
+.header {
+	width: 100%;
+	text-align: center;
+}
+/*
+	The login and signup forms have standard formatting with centered text and white background color
+*/
+.login {
+	text-align: center;
+	background-color: white;
+	border-radius: 3%;
+}
+.signup {
+	text-align: center;
+	background-color: white;
+	border-radius: 3%;
+}
+/*
+	Setting the widths of the input fields so they appear better on the page
+*/
+input[type=text], input[type=password] {
+	width: 358px;
+	padding-bottom: 0px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-radius: 0px;
+}
+/*
+	Basic formatting of the signupLink div
+*/
+.signupLink {
+	text-align: center;
+}
+/*
+	Modifying the a attribute to always have no text-decoration and setting the background color
+*/
+a {
+	text-decoration: none;
+	background-color: #eed98e;
+}
+/*
+	Change the visited color of the a attribute to be blue
+*/
+a:visited {
+	color: blue;
+	background-color: #eed98e;
+}
+/*
+	When hovering over the a attribute the element turns to a shade of purple
+*/
+a:hover {
+	color: purple;
+}
+/*
+	Setting the dimensions of the glyphicon and placement on the page
+*/
+.glyphicon {
+	font-size: 150px;
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: -125px;
+}
+/*
+	The list id is the id for the unordered list that creates the navbar
+	The style type is set to none and the background color is changed
+*/
+#list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+/*
+	The elements of the unordered list are floated left and given white text
+*/
+#one, #two, #three, #four, #five {
+	float: left;
+	color: white;
+}
+/*
+	The elements of the unordered list are shown in block display, which puts the horizontal instead of vertical
+	The text is then centered and given no deoration or background or border
+*/
+#one, #two, #three, #four, #five {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background: none;
+	border: none;
+}
+/*
+	Hovering over the unordered list element changes the background color to differentiate it
+*/
+#one:hover, #two:hover, #three:hover, #four:hover, #five:hover {
+	background-color: #111;
+}
+/*
+	The evaluation div is set to 100% width to fill the container and display is none so it is not initially seen
+*/
+.evaluation {
+	width: 100%;
+	display: none;
+}
+/*
+	The styling for the navbar. The element text is center aligned and the width is set to fill the container
+*/
+.navbar1 {
+	margin-top: -.01px;
+	width: 100%;
+	text-align: center;
+}
+/*
+	Hide the roster
+*/
+#roster {
+	display: none;
+}
+/*
+	Hide the review
+*/
+#review {
+	display: none;
+}
+/*
+	Hide the project groups
+*/
+#project {
+	display: none;
+}
+/*
+	The classname class is what the SER340 and SER305 elements are located in. It floats them left and sets a margin to place them
+*/
+.classname {
+	float: left;
+	margin-left: 10%;
+}
+/*
+	Hide the second roster
+*/
+#roster2 {
+	display: none;
+}
+/*
+	Format the group numbers by floating them and setting a margin. Also make them not visible initially
+*/
+.groupnum1 {
+	float: right;
+	margin-right: 10%;
+	display: none;
+}
+.groupnum2 {
+	float: right;
+	margin-right: 10%;
+	display: none;
+}
+/*
+	Sets the dimensions and placement for the evaluation review text. This is the text located at the bottom of the page after a group number is picked.
+	It is floated left and given a top margin to place it underneath the class list
+*/
+.review1 {
+	margin-top: 25%;
+	float: left;
+	margin-left: -12%;
+	display: none;
+	text-align: left;
+	width: 34%;
+}
+/*
+	Float the groups and place them with a margin and make them invisible
+*/
+.group1, .group2 {
+	float: right;
+	margin-right: 10%;
+	display: none;
+}
+/*
+	The element class handles the names that are inside the group lists. It formats them to look nicer on the page
+*/
+.element {
+	padding-right: 40px;
+}
+/*
+	The buttons are what the elements are that are clicked. It sets the background to none and the border to none so they do not look like buttons
+*/
+.button {
+	background: none;
+	border: none;
+}
+/*
+	The media query makes it so when the screen width is less than 1075px the quinnipiac logos on the sides of the page disappear
+	Without this they would float above the information in the center
+*/
+@media (max-width: 1075px) {
+	#image, #image2 {
+		display: none;
+	}
+}

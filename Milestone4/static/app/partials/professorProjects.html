@@ -1,0 +1,83 @@
+<div class="main">
+    <!-- The divs left and right handle the banners on the sides of the page where the quinnipiac logo is -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- The container div contains everything located in the middle of the page -->
+    <div class="container">
+        <!-- The navbar contains the items that when selected show and hide different aspects of the page -->
+        <div class="navbar1">
+            <ul id="list">
+                <li id="one">
+                    <a href="#professor/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#professor/reviews">Review Evaluations</a>
+                </li>
+                <li id="three">
+                    <a href="#professor/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- The project div allows the professor to see who is in which group. Update is to show groups for specific projects -->
+        <div class="project" id="project">
+            <h1>Project Groups</h1>
+            <div class="classname">
+                <!-- When clicked, the SER340 and SER305 items show they're respective elements -->
+                <h2>Class List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showProjectGroup1()">
+                    SER340
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showProjectGroup2()">
+                    SER305
+                </button>
+            </div>
+            <button style="float: right; margin-left: 15px;" onclick="addProject()">Add Project</button>
+            <div class="group1" id="group1">
+                <h3>Group 1</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Daniel Dresselhouse</li>
+                    <li class="element">Matthew Rosen</li>
+                </ul>
+                <h3>Group 2</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Charles Zhu</li>
+                    <li class="element">Carly Emile</li>
+                </ul>
+                <h3>Group 3</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Anthony Cuomo</li>
+                    <li class="element">Ian Jacobs</li>
+                    <li class="element">Mateu Feliu</li>
+                </ul>
+            </div>
+            <div class="group2" id="group2">
+                <h3>Group 1</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Daniel Dresselhouse</li>
+                    <li class="element">Alexander Levin</li>
+                </ul>
+                <h3>Group 2</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Anthony Cuomo</li>
+                    <li class="element">Matthew Jagiela</li>
+                </ul>
+                <h3>Group 3</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Matthew Rosen</li>
+                    <li class="element">Carly Emile</li>
+                </ul>
+                <h3>Group 4</h3>
+                <ul style="list-style: none;">
+                    <li class="element">Mateu Feliu</li>
+                    <li class="element">Ryan Ek</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

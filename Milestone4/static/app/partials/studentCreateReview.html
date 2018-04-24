@@ -1,0 +1,112 @@
+<!-- The way I style, I put everything into one big div called main, and then code from there -->
+<div class="main">
+    <!-- The divs left and right are the formatting used on the sides that contain the quinnipiac logos -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- Container contains the middle portion of the page -->
+    <div class="container">
+        <!-- Navbar 1 deals with the navbar elements at the top of the page. Each one contains onclick methods to show and hide elements -->
+        <div class="navbar1">
+            <!-- I utilized an unordered list here to display the elements of the navbar -->
+            <ul id="list">
+                <li id="one">
+                    <a href="#student/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#student/createReviews">Submit Evaluation</a>
+                </li>
+                <li id="three">
+                    <a href="#student/reviews">Review Evaluations</a>
+                </li>
+                <li id="four">
+                    <a href="#student/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+        <!-- The evaluation div is the div shown when the Submit EvaLuations navbar elements is clicked -->
+        <div class="evaluation" id="evaluations">
+            <h1>Evaluation Form</h1>
+            <div style="text-align: center;">
+                <!-- These three divs are bootstrap divs that create and handle the buttons that are displayed below the navbar -->
+                <form>
+                    <div class="form-group">
+                        <div class="dropdown" style="float: left; padding-right: 15%; padding-left: 5px;">
+                            <select class="form-control" ng-model="crCourse" ng-options="course.courseName for course in Courses track by course.courseCode">
+                                <!-- <option value="0">Select Course</option>
+                                <option value="ser340">SER 340</option>
+                                <option value="ser305">SER 305</option> -->
+                            </select>
+                        </div>
+                        <div class="dropdown" style="float: left; padding-right: 15%;">
+                            <select class="form-control" ng-model="crProject" ng-options="project.projectName for project in Projects track by project.projectCode">
+                                <!-- <option value="0">Select Project</option>
+                                <option value="group1">Group 1</option>
+                                <option value="group2">Group 2</option>
+                                <option value="group3">Group 3</option> -->
+                            </select>
+
+                        </div>
+                        <div class="dropdown" style="float: left;">
+                            <select class="form-control" ng-model="crStudent" ng-options="course.students.firstName for student in Courses track by course.students.studentId">
+                                <!-- <option value="0">Select Student</option>
+                                <option value="student1">Matthew</option>
+                                <option value="student2">Matt</option>
+                                <option value="student3">Mateu</option> -->
+                            </select>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- The form is the actual submittion form for the evaluations. Once you hit submit you are brought back to the main page -->
+                    <div class="form-group">
+                        Performance:
+                        <input type="radio" ng-model="performanceR" value="1">1
+                        <input type="radio" ng-model="performanceR" value="1">2
+                        <input type="radio" ng-model="performanceR" value="1">3
+                        <input type="radio" ng-model="performanceR" value="1">4
+                        <input type="radio" ng-model="performanceR" value="1">5
+                        <br>
+                        <textarea ng-model="performanceC" name="text1" cols="40" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        Collaboration:
+                        <input type="radio" ng-model="collaborationR" value="1">1
+                        <input type="radio" ng-model="collaborationR" value="1">2
+                        <input type="radio" ng-model="collaborationR" value="1">3
+                        <input type="radio" ng-model="collaborationR" value="1">4
+                        <input type="radio" ng-model="collaborationR" value="1">5
+                        <br>
+                        <textarea ng-model="collaborationC" name="text1" cols="40" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        Teamwork:
+                        <input type="radio" ng-model="teamworkR" value="1">1
+                        <input type="radio" ng-model="teamworkR" value="1">2
+                        <input type="radio" ng-model="teamworkR" value="1">3
+                        <input type="radio" ng-model="teamworkR" value="1">4
+                        <input type="radio" ng-model="teamworkR" value="1">5
+                        <br>
+                        <textarea ng-model="teamworkC" name="text1" cols="40" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        Contribution:
+                        <input type="radio" ng-model="contributionR" value="1">1
+                        <input type="radio" ng-model="contributionR" value="1">2
+                        <input type="radio" ng-model="contributionR" value="1">3
+                        <input type="radio" ng-model="contributionR" value="1">4
+                        <input type="radio" ng-model="contributionR" value="1">5
+                        <br>
+                        <textarea ng-model="contributionC" name="text1" cols="40" rows="3"></textarea>
+                    </div>
+                    <input type="submit" name="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

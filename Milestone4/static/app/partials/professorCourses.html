@@ -1,0 +1,252 @@
+<div class="main">
+    <!-- The divs left and right handle the banners on the sides of the page where the quinnipiac logo is -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- The container div contains everything located in the middle of the page -->
+    <div class="container">
+        <!-- The navbar contains the items that when selected show and hide different aspects of the page -->
+        <div class="navbar1">
+            <ul id="list">
+                <li id="one">
+                    <a href="#professor/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#professor/reviews">Review Evaluations</a>
+                </li>
+                <li id="three">
+                    <a href="#professor/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+        <!-- The roster div allows the professor to see the students who are currently attending the class -->
+        <div class="roster" id="roster">
+            <h1>Class Roster</h1>
+            <div class="classname">
+                <!-- When clicked, the SER340 and SER305 items show the hidden elements respectively -->
+                <h2>Class List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showClass1()">
+                    SER340
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showClass2()">
+                    SER305
+                </button>
+            </div>
+            <h2>Student Roster</h2>
+            <!-- By default, the roster for SER340 is visible while SER305's roster is hidden -->
+            <div id="roster1">
+                <ul style="list-style: none; float: right; margin-right: 17%;">
+                    <li>Matthew Rosen</li>
+                    <li>Ian Jacobs</li>
+                    <li>Carly Emile</li>
+                    <li>Charles Zhu</li>
+                    <li>Mateu Feliu</li>
+                    <li>Daniel Dresselhouse</li>
+                    <li>Anthony Cuomo</li>
+                </ul>
+            </div>
+            <div id="roster2">
+                <ul style="list-style: none; float: right; margin-right: 17%;">
+                    <li>Carly Emile</li>
+                    <li>Daniel Dresselhouse</li>
+                    <li>Matthew Rosen</li>
+                    <li>Mateu Feliu</li>
+                    <li>Anthony Cuomo</li>
+                    <li>Alexander Levin</li>
+                    <li>Matthew Jagiela</li>
+                    <li>Charles Zhu</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- The information div is the main div that is loaded up when a professor enters the site -->
+        <!-- The professors have 3 buttons at the top left that allow them to bring up forms to edit the roster, add a project, or add a class -->
+        <!-- It is the same as the student layout where they must click on items to display descriptions and due dates, except the professors can see remaining evaluations -->
+        <div class="information" id="information">
+            <h1>Class Information</h1>
+            <br>
+            <h1 style="float: left; padding-left: 7px;">Welcome:</h1>
+            <button style="float: right; margin-left: 15px;" onclick="addClass()">Add Class</button>
+            <button style="float: right;" onclick="updateRoster()">Update Roster</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- These are the forms that the professors are able to fill out -->
+            <!-- These forms will create classes, projects, and edit rosters -->
+            <!-- Once submitted the professor is brought back to the main page -->
+            <div class="form" id="projectForm" style="display: none;">
+                <form>
+                    <fieldset>
+                        <legend>Add Project</legend>
+                        <label for="course">Type in Course Number</label>
+                        <br>
+                        <input type="text" name="course">
+                        <br>
+                        <label for="projectName">Project Name</label>
+                        <br>
+                        <input type="text" name="projectName">
+                        <br>
+                        <label for="projectDescription">Project Description</label>
+                        <br>
+                        <textarea name="projectDescription" rows="4" cols="50"></textarea>
+                        <br>
+                        <label for="projectDueDate">Due Date</label>
+                        <br>
+                        <input type="text" name="projectDueDate">
+                        <br>
+                        <p>Would you like to create a course evaluation for this project?</p>
+                        <input type="radio" name="createEval" checked="">Yes
+                        <input type="radio" name="createEval">No
+                        <br>
+                        <br>
+                        <input type="submit" name="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="classForm" id="classForm" style="display: none;">
+                <form>
+                    <fieldset>
+                        <legend>Add Class</legend>
+                        <label for="projectName">Class Name</label>
+                        <br>
+                        <input type="text" name="projectName">
+                        <br>
+                        <label for="classNumber">Class Number</label>
+                        <br>
+                        <input type="text" name="classNumber">
+                        <br>
+                        <label for="classDescription">Class Description</label>
+                        <br>
+                        <textarea name="classDescription" rows="4" cols="50"></textarea>
+                        <br>
+                        <label for="addStudent">Add Student (Optional)</label>
+                        <br>
+                        <input type="text" name="addStudent">
+                        <br>
+                        <label for="addRoster">Add Roster (Optional)</label>
+                        <br>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select File
+                            <span class="caret"></span>
+                        </button>
+                        <br>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Roster.docx</a>
+                            </li>
+                            <li>
+                                <a href="#">Roster.txt</a>
+                            </li>
+                            <li>
+                                <a href="#">Add Option...</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <input type="submit" name="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="updateRoster" id="updateRoster" style="display: none;">
+                <form>
+                    <fieldset>
+                        <legend>Update Roster</legend>
+                        <label for="course">Type in Course Number</label>
+                        <br>
+                        <input type="text" name="course">
+                        <br>
+                        <label for="addStudent">Add Student</label>
+                        <br>
+                        <input type="text" name="addStudent">
+                        <br>
+                        <label for="roster">Upload Roster</label>
+                        <br>
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select File
+                            <span class="caret"></span>
+                        </button>
+                        <br>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Roster.docx</a>
+                            </li>
+                            <li>
+                                <a href="#">Roster.txt</a>
+                            </li>
+                            <li>
+                                <a href="#">Add Option...</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <br>
+                        <input type="submit" name="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            <!-- This is the same information shown to the students, except when clicking on a project the professor is able to see how many evaluations remain -->
+            <div class="container-fluid" id="infocontainer" style="width: 50%;">
+                <div class="col-md-3">
+                    <h2>Classes:</h2>
+                    <ul style="list-style: none;">
+                        <li style="padding-right: 45px;" onclick="showList1()">SER340</li>
+                        <li style="padding-right: 45px;" onclick="showList2()">SER305</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h2>Projects:</h2>
+                    <ul id="list1" style="list-style: none; display: none;">
+                        <li style="padding-right: 45px;" onclick="showProject1()">Create a Website</li>
+                        <li style="padding-right: 30px;" onclick="showProject2()">Revise your SRS document</li>
+                        <li style="padding-right: 45px;" onclick="showProject3()">Hello World</li>
+                    </ul>
+                    <ul id="list2" style="list-style: none; display: none;">
+                        <li style="padding-right: 45px;" onclick="showProject4()">Assignment 11</li>
+                        <li style="padding-right: 45px;" onclick="showProject5()">DealSea Project</li>
+                    </ul>
+                </div>
+                <!-- The remaining paragraph elements are the hidden descriptions of the page. Clicking on their respective elements will show them and hide the rest -->
+                <div class="col-md-3">
+                    <p id="SER340Description" style="display: none;">SER340 is the software requirements analysis class. This class covers proper elicitation of requirements
+                        from clients and how to appropriately manage the requirements. This class also covers basic HTML,
+                        CSS, and Javascript.</p>
+                    <p id="SER305Description" style="display: none;">SER305 is the advanced computational problem solving class. This class teaches students how to solve
+                        problems creatively while also constraining the problems to specific space and time requirements.
+                        This class covers topics such as bitwise, dynamic programming, programming with tree structures,
+                        etc.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p id="websiteProject" style="display: none;">Students must create a website that satisfies an interviewed client's requirements.
+                        <br>
+                        <br>Due: 12/14/17
+                        <br>
+                        <br>3 Evaluations remaining</p>
+                    <p id="srsRevision" style="display: none;">Students must revise and resubmit the SRS document so that it pertains to the current website.
+                        <br>
+                        <br>Due: 12/25/17
+                        <br>
+                        <br>0 Evaluations remaining</p>
+                    <p id="helloWorld" style="display: none;">Self Explanatory
+                        <br>
+                        <br>Due 12/13/17
+                        <br>
+                        <br>2 Evaluations remaining</p>
+                    <p id="assignment11" style="display: none;">Students are to complete assignment 11 by Friday. Directions are posted on mimir.
+                        <br>
+                        <br>Due: 12/20/17
+                        <br>
+                        <br>1 Evaluation remaining</p>
+                    <p id="dealsea" style="display: none;">Students must create and present a program that is able to go to a website and return deal information
+                        pertaining to a deal that a user specifies. The program must also run on a user specified time interval.
+                        <br>
+                        <br>Due: 12/30/17
+                        <br>
+                        <br>0 Evaluations remaining</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

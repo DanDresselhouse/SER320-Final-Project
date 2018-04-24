@@ -1,0 +1,178 @@
+<!-- The way I style, I put everything into one big div called main, and then code from there -->
+<div class="main">
+    <!-- The divs left and right are the formatting used on the sides that contain the quinnipiac logos -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- Container contains the middle portion of the page -->
+    <div class="container">
+        <!-- Navbar 1 deals with the navbar elements at the top of the page. Each one contains onclick methods to show and hide elements -->
+        <div class="navbar1">
+            <!-- I utilized an unordered list here to display the elements of the navbar -->
+            <ul id="list">
+                <li id="one">
+                    <a href="#student/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#student/createReviews">Submit Evaluation</a>
+                </li>
+                <li id="three">
+                    <a href="#student/reviews">Review Evaluations</a>
+                </li>
+                <li id="four">
+                    <a href="#student/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+        <!-- This is the review evaluations section of the site. Students are able to anonymously view evaluations -->
+        <div class="review" id="review">
+            <h1>Review Evaluations</h1>
+            <div class="classname">
+                <!-- When clicking on either SER340 or SER305 3 sets of groups or 4 sets of groups show up. -->
+                <!-- You can click on one of those groups and see the evaluations of that group -->
+                <h2>Class List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showGroup1()">
+                    SER340
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showGroup2()">
+                    SER305
+                </button>
+            </div>
+            <div class="groupnum1" id="groupnum1">
+                <h2>Group List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview1()">
+                    Group1
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview2()">
+                    Group2
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview3()">
+                    Group3
+                </button>
+            </div>
+            <div class="groupnum2" id="groupnum2">
+                <h2>Group List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview4()">
+                    Group1
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview5()">
+                    Group2
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview6()">
+                    Group3
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview7()">
+                    Group4
+                </button>
+            </div>
+            <div class="review1" id="review1">
+                <!-- These are the evaluations. Because they are hard coded in they are all the same -->
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review2">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review3">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review4">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review5">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review6">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review7">
+                <h3>Student 3's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Student 1:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Student 2:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+        </div>
+    </div>
+</div>

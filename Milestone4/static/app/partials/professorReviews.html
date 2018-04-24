@@ -1,0 +1,173 @@
+<div class="main">
+    <!-- The divs left and right handle the banners on the sides of the page where the quinnipiac logo is -->
+    <div class="left">
+        <img src="images/quinnipiaclogo.png" id="image">
+    </div>
+    <div class="right">
+        <img src="images/quinnipiaclogo.png" id="image2">
+    </div>
+    <!-- The container div contains everything located in the middle of the page -->
+    <div class="container">
+        <!-- The navbar contains the items that when selected show and hide different aspects of the page -->
+        <div class="navbar1">
+            <ul id="list">
+                <li id="one">
+                    <a href="#professor/courses">Classes</a>
+                </li>
+                <li id="two">
+                    <a href="#professor/reviews">Review Evaluations</a>
+                </li>
+                <li id="three">
+                    <a href="#professor/projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- In the review div the professor is able to see who did which evaluation, and how they evaluated their partners. It is not anonymous in the professor view -->
+        <div class="review" id="review">
+            <h1>Review Evaluations</h1>
+            <div class="classname">
+                <!-- When pressing SER340 or SER305 and then a group number the evaluations for that group show up -->
+                <h2>Class List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showGroup1()">
+                    SER340
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showGroup2()">
+                    SER305
+                </button>
+            </div>
+            <div class="groupnum1" id="groupnum1">
+                <h2>Group List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview1()">
+                    Group1
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview2()">
+                    Group2
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview3()">
+                    Group3
+                </button>
+            </div>
+            <div class="groupnum2" id="groupnum2">
+                <h2>Group List:</h2>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview4()">
+                    Group1
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview5()">
+                    Group2
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview6()">
+                    Group3
+                </button>
+                <br>
+                <button class="button" style="font-size: 2.25em;" onclick="showReview7()">
+                    Group4
+                </button>
+            </div>
+            <div class="review1" id="review1">
+                <!-- These reviewws are hard coded in, see they are all the same -->
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review2">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review3">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review4">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review5">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review6">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+            <div class="review1" id="review7">
+                <h3>Mateu's Reviews:</h3>
+                <h4 style="padding-left: 1em;">Daniel:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+                <br>
+                <h4 style="padding-left: 1em;">Matthew:</h4>
+                <p style="padding-left: 3em;">Performance: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Collaboration: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Teamwork: 5 stars, no comments</p>
+                <p style="padding-left: 3em;">Contribution: 5 stars, no comments</p>
+            </div>
+        </div>
+    </div>
+</div>
